@@ -1,6 +1,5 @@
-import unittest
-import asyncdispatch
-import glowup 
+import std/[unittest, asyncdispatch] 
+import glowup
 
 test "L":
   expect L:
