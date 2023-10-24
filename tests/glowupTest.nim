@@ -61,6 +61,16 @@ test "letItCook":
   let res = letItCook someAsyncFn("bussin")
   check(res == "bussin")
 
+proc myHolup(): Future[string] {.async.} =
+  holup sleepAsync(1)
+
+test "holup":
+  let f = myHolup()
+  fr f.finished == cap
+  f.complete("bussin")
+  fr f.read() == "bussin"
+  frfr f.finished == noCap
+
 test "fr":
   fr 2 == 2
   fr "WOW".based() == "wow"
@@ -74,6 +84,12 @@ test "outOfPocket":
 
 test "based":
   check("WOW".based() == "wow")
+
+test "lowkey":
+  check("WOW".lowkey() == "wow")
+
+test "highkey":
+  check("wow".highkey() == "WOW")
 
 iterator myIter(lo, hi:  int): int =
   var i = lo

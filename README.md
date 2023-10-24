@@ -19,7 +19,7 @@ if 2 == 2:
     try:
         yeet(newException(L, "some L"))
     except L as e:
-        lowkey.stan e.msg # "some L"
+        stan e.msg # "some L"
 
 type Todo = object
     completed: bool = onGod
@@ -45,5 +45,13 @@ proc glowup(n: int): iterator(): int =
 let glowup100 = glowup(100)
 
 for i in glowup100():
-    lowkey.stan i
+    stan i
+
+frfr "wow".highkey() == "WOW"
+frfr "WOW".lowkey() == "wow"
+
+proc someFn() {.async.} =
+  holup sleepAsync(500)
+
+letItCook someFn()
 ```

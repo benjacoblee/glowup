@@ -1,16 +1,13 @@
-import strutils
-import asyncdispatch
+import std/[strutils, asyncdispatch]
 
-type Lowkey = object
 type L* = object of CatchableError
 
 const noCap* = true
 const cap* = false 
 const onGod* = true
 const outOfPocket* = Inf
-const lowkey* = Lowkey() 
 
-proc stan*[T](l: Lowkey, args: varargs[T, `$`]) =
+proc stan*[T](args: varargs[T, `$`]) =
   for thing in args:
     echo thing
 
@@ -23,8 +20,14 @@ proc letItCook*[T](f: Future[T]): T =
   
   f.read()
 
-proc based*(str: string): string =
-  return str.toLower()
+func lowkey*(s: string): string =
+  return s.toLower()
+
+func highkey*(s: string): string =
+  return s.toUpper()
+
+func based*(s: string): string =
+  return s.toLower()
 
 template fr*(statement) =
   assert statement
@@ -49,3 +52,6 @@ template skrt*() =
 
 template clapback*(statement) =
   yield statement
+
+template holup*(statement) =
+  await statement
