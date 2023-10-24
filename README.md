@@ -64,5 +64,5 @@ proc asyncProc(): Future[string] {.async.} =
   finally:
     client.close()
 
-echo letItCook asyncProc()
+stan letItCook asyncProc()
 ```
