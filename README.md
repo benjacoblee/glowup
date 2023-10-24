@@ -19,7 +19,7 @@ if 2 == 2:
     try:
         yeet(newException(L, "some L"))
     except L as e:
-        echo e.msg # "some L"
+        lowkey.stan e.msg # "some L"
 
 type Todo = object
     completed: bool = onGod
@@ -45,5 +45,5 @@ proc glowup(n: int): iterator(): int =
 let glowup100 = glowup(100)
 
 for i in glowup100():
-    echo i
+    lowkey.stan i
 ```
