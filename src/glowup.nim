@@ -1,5 +1,4 @@
-import strutils
-import asyncdispatch
+import std/[strutils, asyncdispatch]
 
 type Lowkey = object
 type L* = object of CatchableError
