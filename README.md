@@ -10,7 +10,7 @@ let mySeq = @[1,2,3,4]
 proc findIdx(nums: seq[int], item: int): int =
     for i in 0 ..< nums.len:
         if nums[i] == item:
-            drop nums[i]
+            drop i
     itsGiving -1
 
 fr findIdx(mySeq, 5) == -1
