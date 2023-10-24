@@ -53,5 +53,5 @@ template skrt*() =
 template clapback*(statement) =
   yield statement
 
-template holup*(statement) =
+template holup*(statement): auto =
   await statement
