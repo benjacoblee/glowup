@@ -1,3 +1,9 @@
+## About
+
+Partial nimplementation of [glowup](https://github.com/christina-de-martinez/babel-plugin-glowup-vibes/)
+
+## Usage
+
 ```nim
 let mySeq = @[1,2,3,4]
 
