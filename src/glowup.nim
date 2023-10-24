@@ -44,9 +44,6 @@ template `fr`*(statement) =
 template `frfr`*(statement) =
   assert statement
 
-template `istg`*(statement) =
-  assert statement
-
 const outOfPocket* = Inf
 
 proc based*(str: string): string =

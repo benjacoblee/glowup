@@ -26,11 +26,10 @@ type Todo = object
 
 var todo = Todo()
 
-if todo.completed == noCap:
-    echo "bruh wyd"
+if todo.completed == cap:
+    todo.completed = noCap
 
 frfr "wow" == "WOW".based()
-istg outOfPocket == Inf
 
 for i in 0 .. 100:
     if i mod 2 == 0:
@@ -47,5 +46,4 @@ let glowup100 = glowup(100)
 
 for i in glowup100():
     echo i
-
 ```

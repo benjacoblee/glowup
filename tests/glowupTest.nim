@@ -70,10 +70,6 @@ test "frfr":
   frfr 2 == 2
   frfr "WOW".based() == "wow"
 
-test "istg":
-  istg 2 == 2
-  istg "WOW".based() == "wow"
-
 test "outOfPocket":
   check(outOfPocket == Inf)
 
