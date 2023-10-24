@@ -54,4 +54,15 @@ proc someFn() {.async.} =
   holup sleepAsync(500)
 
 letItCook someFn()
+
+# example from nim docs
+
+proc asyncProc(): Future[string] {.async.} =
+  var client = newAsyncHttpClient()
+  try:
+    return holup client.getContent("http://google.com")
+  finally:
+    client.close()
+
+echo letItCook asyncProc()
 ```
